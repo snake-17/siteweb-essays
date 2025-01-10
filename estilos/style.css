@@ -7,9 +7,10 @@
     font-family: "Lato", serif;
     font-size: 20px;
 }
-.header a{
+a{
     text-decoration: none;
 }
+/**Aqui empieza el navar*/
 .header{
     background-color:#012D66;
     display: flex;
@@ -45,7 +46,6 @@
 .header .nav-links a{
     font-size: 700;
     color: white;
-    /**cheacar*/
 }
 .header .nav-links li a:hover{
     color: yellow;
@@ -70,8 +70,8 @@
     background-color: white;
     color: yellow;
     transform: scale(1.1);
+    @media screen and (max-width:800px) {
 }
-@media screen and (max-width:800px) {
     .nav-links, .btn{
         display: none;
     }
@@ -137,7 +137,6 @@
 
 }
 .foto {
-    flex-shrink: 1;
     position: absolute;
     width: 90%;
     height: 500px;
@@ -188,34 +187,34 @@
     object-fit: cover;
     
 }
-.footer{
+/*Footer*/
+footer{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
     width: 100%;
-    height: 500px;
-    background-color: #230c0f;
-    
+    height: 300px;
+    background-color: #E8EDDF;
 }
-.footer img{
-    height: 100px;
-    width: 100px;
-    object-fit: cover;
+.social-media img{
+    height: 32px;
+    width: 32px;
     border-radius: 50%;
-    
 }
-.footer .menu {
+.social-media,
+.footer-list,
+.derechos{
     display: flex;
-    gap: 10px;
-    list-style: none;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;    
 }
-.footer .menu a {
-    color: white;
-    text-decoration: none;
-    font-size: 25px;
-
+.footer-list a{
+    color: #012D66;
 }
-
 @media (max-width: 768px) {
     .foto {
         height: 250px;
