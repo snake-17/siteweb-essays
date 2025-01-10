@@ -139,7 +139,7 @@
 .foto {
     flex-shrink: 1;
     position: absolute;
-    width: 1200px;
+    width: 90%;
     height: 500px;
     background-image: url('../img/Santa_Anna.jpg');
     background-size: cover;
