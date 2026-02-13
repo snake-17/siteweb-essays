@@ -1,105 +1,119 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travesías y Conexiones Históricas</title>
+    <link rel="stylesheet" href="estilos/style.css" />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travesías y Conexiones Históricas </title>
-    <link rel="stylesheet" href="estilos/style.css">
-</head>
-
-<body>
-
+  <body>
     <header class="header">
-        <div class="logo">
-            <a href="index.html"><img src="img/pexels-pixabay-45201.jpg" alt="me"></a>
-        </div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="autobio.html">Autobiografía</a></li>
-                <li><a href="essays.html">Ensayos</a></li>
-            </ul>
-        </nav>
-        <a href="contact.html" class="btn"><button>Contacto</button></a>
-        <a onclick="openNav()" class="menu" href="#"><button>Menu</button></a>
+      <div class="logo">
+        <a href="index.html"
+          ><img src="img/pexels-pixabay-45201.jpg" alt="me"
+        /></a>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="autobio.html">Autobiografía</a></li>
+          <li><a href="essays.html">Ensayos</a></li>
+        </ul>
+      </nav>
+      <a href="contact.html" class="btn"><button>Contacto</button></a>
+      <a onclick="openNav()" class="menu" href="#"><button>Menu</button></a>
 
-        <div id="mobile-menu" class="overlay">
-            <a onclick="closeNav()" href="" class="close">&times;</a>
-            <div class="overlay-content">
-                <a href="autobio.html">Autobiografía</a>
-                <a href="essays.html">Ensayos</a>
-                <a href="contact.html">Contacto</a>
-            </div>
+      <div id="mobile-menu" class="overlay">
+        <a onclick="closeNav()" href="" class="close">&times;</a>
+        <div class="overlay-content">
+          <a href="autobio.html">Autobiografía</a>
+          <a href="essays.html">Ensayos</a>
+          <a href="contact.html">Contacto</a>
         </div>
+      </div>
     </header>
     <div class="conteiner">
-        <div class="foto">
-
-            <div class="rectangle">
-                <a href="ensayos/one.html">
-                    <h1>Fragmentación y Poder</h1>
-                </a>
-                <a href="ensayos/one.html">
-                    <div class="resume">
-                   
-                        <p>La Descentralización en el Contexto de Santa Anna y sus Efectos en México</p>
-                    </div>    
-                </a>
-                
+      <div class="foto">
+        <div class="rectangle">
+          <a href="./art/resultado.pdf">
+            <h1>Desdolarización digital:</h1>
+          </a>
+          <a href="./art/resultado.pdf">
+            <div class="resume">
+              <p>
+                Innovación tecnológica y poder estructural en el nuevo orden
+                financiero.
+              </p>
             </div>
+          </a>
         </div>
+      </div>
     </div>
-
+    <div class="seccion-titulo">
+      <h3>Recientes</h3>
+      <div class="linea-decorativa"></div>
+    </div>
     <div class="padre">
-        <div class="hijos">
-            <img src="img/1.jpg" alt="es la img uno">
-            <a href="ensayos/two.html">
-                <h2>La Ley Agraria de 1915</h2>
-            </a>
-           
-            <p>Un Legado de Luis Cabrera y Andrés Molina Enríquez</p>
-        </div>
-        <div class="hijos">
-            <img src="img/2.png" alt="es la img uno">
-            <a href="ensayos/three.html">
-                <h2>La Alternancia Política en México</h2>
-            </a>
-            
-           
-            <p>Principios para una Transición Democrática y la Pax Priista</p>
-        </div>
-        <div class="hijos">
-            <img src="img/3.jpg" alt="es la img uno">
-            <a href="ensayos/four.html">
-                <h2>Luis Echeverría y el Proteccionismo</h2>
-            </a>
-            
-            <p>Un Análisis de la Reforma Fracasada</p>
-        </div>
-        <div class="hijos">
-            <img src="img/4.jpg" alt="es la img uno">
-            <a href="ensayos/five.html">
-                <h2>La legitimidad del nuevo Estado mexicano</h2>
-            </a>
-            
-            <p>Analisis y su reconocimiento internacional</p>
-        </div>
+      <div class="hijos">
+        <img src="img/1.jpg" alt="es la img uno" />
+        <a href="art/africaOccidental.pdf">
+          <h2>Colonialismo, dignidad y memoria:</h2>
+        </a>
+
+        <p>
+          Africa Occidental no pertenece únicamente al pasado. Persiste como una
+          herida ética y política que se reactualiza.
+        </p>
+      </div>
+      <div class="hijos">
+        <img src="img/2.jpg" alt="es la img uno" />
+        <a href="art/juridico.pdf">
+          <h2>De la soberanía al compromiso global</h2>
+        </a>
+
+        <p>Los Tratados Internacionales en el sistema jurídico mexicano</p>
+      </div>
+      <div class="hijos">
+        <img src="img/3.jpg" alt="es la img uno" />
+        <a href="art/reforma.pdf">
+          <h2>Reforma de 2011 y control de convencionalidad</h2>
+        </a>
+
+        <p>La constitucionalización del derecho internacional en México</p>
+      </div>
+      <div class="hijos">
+        <img src="img/4.jpg" alt="es la img uno" />
+        <a href="./art/5.pdf">
+          <h2>la humanitaria</h2>
+        </a>
+
+        <p>
+          la aviación como infraestructura estratégica frente a desastres
+          naturales
+        </p>
+      </div>
     </div>
     <footer>
-        <div class="social-media">
-            <a href="https://www.facebook.com/profile.php?id=100058374175419"><img src="img/face.svg" alt="facebook-logo"></a>
-            <a href="https://www.instagram.com/"><img src="img/i.svg" alt="instagram-logo"></a>
-        </div>
-        <div class="footer-list">
-            <a href="autobio.html">Autobiografía</a>
-            <a href="essays.html">Ensayos</a>
-            <a href="contact.html">Contacto</a>
-        </div>
-        <div class="derechos">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius, fugiat.</p>
-        </div>
+      <div class="social-media">
+        <a href="https://www.facebook.com/profile.php?id=100058374175419"
+          ><img src="img/face.svg" alt="facebook-logo"
+        /></a>
+        <a href="https://www.instagram.com/"
+          ><img src="img/i.svg" alt="instagram-logo"
+        /></a>
+      </div>
+      <div class="footer-list">
+        <a href="autobio.html">Autobiografía</a>
+        <a href="essays.html">Ensayos</a>
+        <a href="contact.html">Contacto</a>
+      </div>
+      <div class="derechos">
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius,
+          fugiat.
+        </p>
+      </div>
     </footer>
     <script type="text/javascript" src="javascript/nav.js"></script>
-</body>
-
+  </body>
 </html>
