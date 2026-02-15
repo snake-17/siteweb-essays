@@ -1,136 +1,146 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ensayos</title>
+    <link rel="stylesheet" href="estilos/art.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ensayos</title>
-  <link rel="stylesheet" href="estilos/essays.css" />
-</head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <a href="index.html"
+          ><img src="img/pexels-pixabay-45201.jpg" alt="me"
+        /></a>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="autobio.html">Autobiografía</a></li>
+          <li><a href="essays.html">Articulos</a></li>
+        </ul>
+      </nav>
+      <a href="contact.html" class="btn"><button>Contacto</button></a>
+      <a onclick="openNav()" class="menu" href="#"><button>Menu</button></a>
+      <div id="mobile-menu" class="overlay">
+        <a onclick="closeNav()" href="" class="close">&times;</a>
+        <div class="overlay-content">
+          <a href="autobio.html">Autobiografía</a>
+          <a href="essays.html">Articulos</a>
+          <a href="contact.html">Contacto</a>
+        </div>
+      </div>
+    </header>
+    <section class="ensayos">
+      <div class="encabezado">
+        <h1>Articulos</h1>
+      </div>
+      <div class="container">
+        <div class="hijo">
+          <a href="ensayos/one.html">
+            <img src="./img/dolares.jpg" alt="Dollars" />
+            <h3>BLABLABLABLALBLA</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos
+              debitis nam, eum rem eveniet nisi dolore placeat optio ad deleniti
+              mollitia asperiores pariatur culpa? Voluptate modi esse vero
+              repellat rerum?
+            </p>
+          </a>
+        </div>
+        <div class="hijo">
+          <img src="img/1.jpg" alt="imagen-uno" />
+          <a href="/ensayos/two.html">
+            <h3>Fragmentación y Poder</h3>
+          </a>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
+            minus.
+          </p>
+        </div>
+        <div class="hijo">
+          <img src="img/2.jpg" alt="imagen-dos" />
+          <a href="ensayos/three.html">
+            <h3>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non alias
+              repudiandae modi sit aspernatur. Porro.
+            </h3>
+          </a>
 
-<body>
-  <header class="header">
-    <div class="logo">
-      <a href="index.html"><img src="img/pexels-pixabay-45201.jpg" alt="me" /></a>
-    </div>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="autobio.html">Autobiografía</a></li>
-        <li><a href="essays.html">Ensayos</a></li>
-      </ul>
-    </nav>
-    <a href="contact.html" class="btn"><button>Contacto</button></a>
-    <a onclick="openNav()" class="menu" href="#"><button>Menu</button></a>
-    <div id="mobile-menu" class="overlay">
-      <a onclick="closeNav()" href="" class="close">&times;</a>
-      <div class="overlay-content">
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum,
+            vero rem eos minima possimus qui eligendi repellat consequuntur.
+            Incidunt dolores suscipit molestias labore? Alias eius ut soluta
+            excepturi eveniet quod quasi illum fuga, eum adipisci cumque,
+            exercitationem recusandae cupiditate aliquam totam incidunt
+            assumenda nesciunt error. Deleniti odio dolores obcaecati eligendi
+            iure soluta eos sequi quisquam? Quo maiores exercitationem, alias
+            explicabo nobis voluptatum. Accusantium omnis, impedit atque nulla
+            qui eveniet, quod est dolorum ducimus mollitia saepe. Alias quidem,
+            quasi assumenda odit molestias earum explicabo rerum vel nihil
+            debitis impedit corporis ad quo dolore eligendi repudiandae minus
+            quae magnam dolores, sit ipsum.
+          </p>
+        </div>
+        <div class="hijo">
+          <img src="img/3.jpg" alt="imagen-tres" />
+          <a href="ensayos/four.html">
+            <h3>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione,
+              quo?
+            </h3>
+          </a>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut aperiam
+            dolor laudantium odit molestiae id blanditiis totam ducimus labore,
+            odio earum laborum minima libero quo explicabo quae reprehenderit
+            officiis dicta eligendi necessitatibus molestias sed qui delectus
+            quia. Corrupti aperiam rerum natus quaerat consectetur dolorem,
+            aliquid, ducimus sint exercitationem nostrum quisquam.
+          </p>
+        </div>
+        <div class="hijo">
+          <img src="img/4.jpg" alt="imagen-cuadro" />
+          <a href="ensayos/five.html">
+            <h3>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente
+              ducimus mollitia consectetur eum quo nostrum!
+            </h3>
+          </a>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti,
+            harum ullam? Repudiandae exercitationem modi vel, fuga rem cumque
+            sed reprehenderit ipsa laudantium magnam ipsum optio, amet in quis
+            autem dicta eaque, incidunt ea magni aliquid dolores dolorem quae
+            nemo? Similique voluptatem sunt velit tempore ea perferendis
+            excepturi, nisi fuga ab.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="social-media">
+        <a href="https://www.facebook.com/profile.php?id=100058374175419"
+          ><img src="img/face.svg" alt="facebook-logo"
+        /></a>
+        <a href="https://www.instagram.com/"
+          ><img src="img/i.svg" alt="instagram-logo"
+        /></a>
+      </div>
+      <div class="footer-list">
         <a href="autobio.html">Autobiografía</a>
-        <a href="essays.html">Ensayos</a>
+        <a href="essays.html">Articulos</a>
         <a href="contact.html">Contacto</a>
       </div>
-    </div>
-  </header>
-  <section class="ensayos">
-    <div class="encabezado">
-      <h1>Ensayos</h1>
-    </div>
-    <div class="container">
-      <div class="hijo">
-        <a href="ensayos/one.html">
-          <img src="img/Santa_Anna.jpg" alt="Santa_Anna">
-          <h3>Santa Anna</h3>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos debitis nam, eum rem eveniet nisi dolore
-            placeat optio ad deleniti mollitia asperiores pariatur culpa? Voluptate modi esse vero repellat rerum?
-          </p>
-        </a>
-      </div>
-      <div class="hijo">
-        <img src="img/1.jpg" alt="imagen-uno" />
-        <a href="/ensayos/two.html">
-          <h3>Fragmentación y Poder</h3>
-        </a>
+      <div class="derechos">
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
-          minus.
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius,
+          fugiat.
         </p>
       </div>
-      <div class="hijo">
-        <img src="img/2.png" alt="imagen-dos" />
-        <a href="ensayos/three.html">
-          <h3>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non alias
-            repudiandae modi sit aspernatur. Porro.
-          </h3>
-        </a>
-
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum, vero rem eos minima possimus qui eligendi
-          repellat consequuntur. Incidunt dolores suscipit molestias labore? Alias eius ut soluta excepturi eveniet quod
-          quasi illum fuga, eum adipisci cumque, exercitationem recusandae cupiditate aliquam totam incidunt assumenda
-          nesciunt error. Deleniti odio dolores obcaecati eligendi iure soluta eos sequi quisquam? Quo maiores
-          exercitationem, alias explicabo nobis voluptatum. Accusantium omnis, impedit atque nulla qui eveniet, quod est
-          dolorum ducimus mollitia saepe. Alias quidem, quasi assumenda odit molestias earum explicabo rerum vel nihil
-          debitis impedit corporis ad quo dolore eligendi repudiandae minus quae magnam dolores, sit ipsum.
-        </p>
-      </div>
-      <div class="hijo">
-        <img src="img/3.jpg" alt="imagen-tres" />
-        <a href="ensayos/four.html">
-          <h3>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione,
-            quo?
-          </h3>
-        </a>
-
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut aperiam
-          dolor laudantium odit molestiae id blanditiis totam ducimus labore,
-          odio earum laborum minima libero quo explicabo quae reprehenderit
-          officiis dicta eligendi necessitatibus molestias sed qui delectus
-          quia. Corrupti aperiam rerum natus quaerat consectetur dolorem,
-          aliquid, ducimus sint exercitationem nostrum quisquam.
-        </p>
-      </div>
-      <div class="hijo">
-        <img src="img/4.jpg" alt="imagen-cuadro" />
-        <a href="ensayos/five.html">
-          <h3>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente
-            ducimus mollitia consectetur eum quo nostrum!
-          </h3>
-        </a>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti,
-          harum ullam? Repudiandae exercitationem modi vel, fuga rem cumque
-          sed reprehenderit ipsa laudantium magnam ipsum optio, amet in quis
-          autem dicta eaque, incidunt ea magni aliquid dolores dolorem quae
-          nemo? Similique voluptatem sunt velit tempore ea perferendis
-          excepturi, nisi fuga ab.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="social-media">
-      <a href="https://www.facebook.com/profile.php?id=100058374175419"><img src="img/face.svg"
-          alt="facebook-logo" /></a>
-      <a href="https://www.instagram.com/"><img src="img/i.svg" alt="instagram-logo" /></a>
-    </div>
-    <div class="footer-list">
-      <a href="autobio.html">Autobiografía</a>
-      <a href="essays.html">Ensayos</a>
-      <a href="contact.html">Contacto</a>
-    </div>
-    <div class="derechos">
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius,
-        fugiat.
-      </p>
-    </div>
-  </footer>
-  <script type="text/javascript" src="javascript/nav.js"></script>
-</body>
-
+    </footer>
+    <script type="text/javascript" src="javascript/nav.js"></script>
+  </body>
 </html>
