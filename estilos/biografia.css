@@ -37,3 +37,57 @@ h1 {
   display: block;
   margin: 0 auto;
 }
+.sobre-mi {
+  padding: 80px 20px;
+  background-color: #ffffff; /* Fondo limpio para que destaque el texto */
+  display: flex;
+  justify-content: center;
+}
+
+.container-perfil {
+  max-width: 800px; /* Un poco más estrecho que las tarjetas para que sea íntimo */
+  line-height: 1.8; /* Espaciado entre líneas para lectura académica */
+}
+
+.encabezado-perfil h3 {
+  color: #1c486e;
+  font-size: 2rem;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.subtitulo {
+  display: block;
+  color: #666;
+  font-style: italic;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.linea-decorativa-perfil {
+  height: 3px;
+  width: 50px;
+  background-color: #1c486e;
+  margin-bottom: 30px;
+}
+
+.extracto {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 20px;
+  border-left: 4px solid #d8d1c7; /* Color arena de tus tarjetas para conectar diseños */
+  padding-left: 20px;
+}
+
+.descripcion {
+  color: #444;
+  margin-bottom: 15px;
+  text-align: justify; /* Estilo formal de ensayo */
+}
+
+/* Resaltado elegante */
+strong {
+  color: #1c486e;
+  font-weight: 600;
+}

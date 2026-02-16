@@ -8,30 +8,8 @@
   </head>
 
   <body>
-    <header class="header">
-      <div class="logo">
-        <a href="index.html"
-          ><img src="img/pexels-pixabay-45201.jpg" alt="me"
-        /></a>
-      </div>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="autobio.html">Autobiografía</a></li>
-          <li><a href="essays.html">Articulos</a></li>
-        </ul>
-      </nav>
-      <a href="contact.html" class="btn"><button>Contacto</button></a>
-      <a onclick="openNav()" class="menu" href="#"><button>Menu</button></a>
+    <div id="navbar-placeholder"></div>
 
-      <div id="mobile-menu" class="overlay">
-        <a onclick="closeNav()" href="" class="close">&times;</a>
-        <div class="overlay-content">
-          <a href="autobio.html">Autobiografía</a>
-          <a href="essays.html">Articulos</a>
-          <a href="contact.html">Contacto</a>
-        </div>
-      </div>
-    </header>
     <div class="conteiner">
       <div class="foto">
         <div class="rectangle">
@@ -93,27 +71,24 @@
         </p>
       </div>
     </div>
-    <footer>
-      <div class="social-media">
-        <a href="https://www.facebook.com/profile.php?id=100058374175419"
-          ><img src="img/face.svg" alt="facebook-logo"
-        /></a>
-        <a href="https://www.instagram.com/"
-          ><img src="img/i.svg" alt="instagram-logo"
-        /></a>
-      </div>
-      <div class="footer-list">
-        <a href="autobio.html">Autobiografía</a>
-        <a href="essays.html">Articulos</a>
-        <a href="contact.html">Contacto</a>
-      </div>
-      <div class="derechos">
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius,
-          fugiat.
-        </p>
-      </div>
-    </footer>
+    <div id="footer-placeholder"></div>
+    <script>
+      function incluirHTML(id, ruta) {
+        fetch(ruta)
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("ERROR AL CARGAR LA RUTA" + ruta);
+            }
+            return response.text();
+          })
+          .then((data) => {
+            document.getElementById(id).innerHTML = data;
+          })
+          .catch((err) => console.error(err));
+      }
+      incluirHTML("navbar-placeholder", "components/nav.html");
+      incluirHTML("footer-placeholder", "components/footer.html");
+    </script>
     <script type="text/javascript" src="javascript/nav.js"></script>
   </body>
 </html>
