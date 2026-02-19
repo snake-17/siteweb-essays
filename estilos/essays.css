@@ -1,66 +1,128 @@
-/* Sección general */
-.ensayos {
-  padding: 40px 20px;
-  background-color: #f9f9f9; /* Un fondo súper sutil para que las tarjetas blancas resalten */
+/* Para que el salto a las categorías sea un deslizamiento suave */
+html {
+  scroll-behavior: smooth;
 }
 
-.encabezado {
+/* SECCIÓN DEL MENÚ DE CATEGORÍAS */
+.categorias-nav {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
   margin-bottom: 50px;
 }
 
-.encabezado h1 {
-  color: #1c486e; /* Azul institucional */
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+/* ESTILOS DEL MENÚ DE CATEGORÍAS */
+.categorias-nav a {
+  text-decoration: none;
+  background-color: transparent; /* Quitamos el fondo gris */
+  color: #1c486e;
+  padding: 8px 10px; /* Reducimos el relleno para que la línea se ajuste al texto */
+  font-weight: 600;
+  font-size: 1.05rem;
+  border: none; /* Quitamos el borde gris */
+  position: relative; /* Necesario para la línea mágica de abajo */
 }
 
-.linea-azul {
-  height: 4px;
-  width: 60px;
+/* La línea azul (invisible por defecto) */
+.categorias-nav a::after {
+  content: "";
+  position: absolute;
+  width: 0; /* Empieza sin ancho */
+  height: 3px; /* Grosor de la línea */
+  bottom: 0;
+  left: 50%;
   background-color: #1c486e;
+  transition:
+    width 0.3s ease,
+    left 0.3s ease; /* Animación suave */
+  transform: translateX(-50%); /* Hace que crezca desde el centro */
 }
 
-/* El Contenedor Grid (La magia de la alineación) */
+/* Limpiamos efectos anteriores de hover por si acaso */
+.categorias-nav a:hover {
+  background-color: transparent;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Efecto Hover: La línea crece al 100% */
+.categorias-nav a:hover::after {
+  width: 100%;
+}
+
+.categoria-seccion {
+  margin-bottom: 70px; /* Espacio grande entre cada bloque de temas */
+}
+/* Ajuste de separación y centrado del contenedor */
+.encabezado {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra el título y la línea azul */
+  margin-top: 80px; /* Despega el encabezado del navbar */
+  margin-bottom: 50px;
+}
+
+/* Tipografía estilo periódico/editorial para el título */
+.encabezado h1 {
+  font-family:
+    "Georgia", "Times New Roman", serif; /* Fuente clásica de periódico */
+  font-size: 4.5rem; /* Tamaño grande e imponente */
+  color: #1c486e !important;
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 1px; /* Separación elegante entre letras */
+}
+
+.categoria-seccion h2 {
+  max-width: 1200px; /* Exactamente el mismo ancho máximo que el .container de las tarjetas */
+  margin: 0 auto 30px auto; /* Centra el contenedor pero mantiene el texto a la izquierda */
+  color: #1c486e;
+  font-size: 1.8rem;
+  border-left: 5px solid #d8d1c7;
+  padding-left: 15px;
+}
+
+/* EL CONTENEDOR GRID (Ajustado para descripciones completas) */
 .container {
   display: grid;
-  /* Esto crea columnas automáticas que no bajan de 320px */
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  /* Ahora las columnas miden mínimo 350px, son un poco más anchas */
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 40px;
-  max-width: 1200px; /* Evita que en pantallas gigantes se estire demasiado */
+  max-width: 1200px;
   margin: 0 auto;
+  align-items: stretch; /* Esto obliga a que todas las tarjetas de la misma fila midan igual de alto */
 }
 
-/* La Tarjeta (Artículo) */
+/* LA TARJETA Y SUS ANIMACIONES */
 .hijo {
   background-color: white;
-  border-radius: 12px; /* Bordes redondeados modernos */
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); /* Sombra suave */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   transition:
     transform 0.3s ease,
-    box-shadow 0.3s ease; /* Animación fluida */
+    box-shadow 0.3s ease;
+  display: flex; /* Asegura que la tarjeta use todo el alto disponible */
+  flex-direction: column;
 }
 
-/* Efecto Hover: la tarjeta se levanta un poco */
 .hijo:hover {
   transform: translateY(-8px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
 .card-enlace {
-  text-decoration: none; /* Quita el subrayado feo del enlace */
+  text-decoration: none;
   color: inherit;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 100%; /* Toma todo el alto que 'align-items: stretch' le permite */
 }
 
-/* Contenedor de la imagen para el efecto Zoom */
 .img-container {
-  height: 220px; /* Altura fija para todas las imágenes */
+  height: 220px;
   overflow: hidden;
 }
 
@@ -68,20 +130,19 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s ease; /* Animación lenta y elegante */
+  transition: transform 0.5s ease;
 }
 
-/* Efecto Zoom en la imagen al pasar el mouse por la tarjeta */
 .hijo:hover .img-container img {
   transform: scale(1.08);
 }
 
-/* Contenido de texto */
+/* EL TEXTO */
 .texto-hijo {
   padding: 25px;
   display: flex;
   flex-direction: column;
-  flex-grow: 1; /* Hace que el contenido ocupe el espacio restante */
+  flex-grow: 1; /* Esto es vital: empuja el botón "Leer artículo" hasta abajo si la tarjeta es muy alta */
 }
 
 .texto-hijo h3 {
@@ -95,17 +156,12 @@
   color: #555;
   line-height: 1.6;
   margin-bottom: 20px;
-
-  /* TRUCO: Limita el texto a 3 líneas exactas con puntos suspensivos */
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  /* Eliminadas las reglas que cortaban el texto. Ahora cabe completo. */
+  text-align: justify;
 }
 
-/* Botón fantasma de "Leer más" */
 .leer-mas {
-  margin-top: auto; /* Lo empuja siempre hacia abajo */
+  margin-top: auto; /* Mantiene el botón pegado abajo */
   font-weight: bold;
   color: #1c486e;
   font-size: 0.95rem;
