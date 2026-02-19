@@ -1,42 +1,114 @@
-/*Empieza el contenedor de los articulos*/
-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-top: 20px;
+/* Sección general */
+.ensayos {
+  padding: 40px 20px;
+  background-color: #f9f9f9; /* Un fondo súper sutil para que las tarjetas blancas resalten */
 }
+
 .encabezado {
-  padding: 30px;
-  display: flex;
-  justify-content: center;
-}
-.container {
-  display: flex;
-  justify-content: center;
-  min-width: 320px;
-  height: 100%;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-.hijo {
   display: flex;
   flex-direction: column;
-  width: 600px;
-  height: auto;
+  align-items: center;
+  margin-bottom: 50px;
 }
-.hijo img {
+
+.encabezado h1 {
+  color: #1c486e; /* Azul institucional */
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.linea-azul {
+  height: 4px;
+  width: 60px;
+  background-color: #1c486e;
+}
+
+/* El Contenedor Grid (La magia de la alineación) */
+.container {
+  display: grid;
+  /* Esto crea columnas automáticas que no bajan de 320px */
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  max-width: 1200px; /* Evita que en pantallas gigantes se estire demasiado */
+  margin: 0 auto;
+}
+
+/* La Tarjeta (Artículo) */
+.hijo {
+  background-color: white;
+  border-radius: 12px; /* Bordes redondeados modernos */
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); /* Sombra suave */
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease; /* Animación fluida */
+}
+
+/* Efecto Hover: la tarjeta se levanta un poco */
+.hijo:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-enlace {
+  text-decoration: none; /* Quita el subrayado feo del enlace */
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Contenedor de la imagen para el efecto Zoom */
+.img-container {
+  height: 220px; /* Altura fija para todas las imágenes */
+  overflow: hidden;
+}
+
+.img-container img {
   width: 100%;
-  height: 50%;
+  height: 100%;
   object-fit: cover;
+  transition: transform 0.5s ease; /* Animación lenta y elegante */
 }
-.hijo h3 {
-  margin-top: 15px;
-  transition: color 0.3 ease;
+
+/* Efecto Zoom en la imagen al pasar el mouse por la tarjeta */
+.hijo:hover .img-container img {
+  transform: scale(1.08);
 }
-.hijo h3:hover {
-  color: #012d66;
-  cursor: pointer;
+
+/* Contenido de texto */
+.texto-hijo {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Hace que el contenido ocupe el espacio restante */
 }
-.hijo p {
-  margin-top: 25px;
+
+.texto-hijo h3 {
+  color: #1c486e;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
+
+.texto-hijo p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+
+  /* TRUCO: Limita el texto a 3 líneas exactas con puntos suspensivos */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Botón fantasma de "Leer más" */
+.leer-mas {
+  margin-top: auto; /* Lo empuja siempre hacia abajo */
+  font-weight: bold;
+  color: #1c486e;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
