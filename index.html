@@ -1,93 +1,116 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      Forum Multipolar | Geopolítica, critico cartesiano, análisis internacional
-      y mundo multipolar
+      Forum Multipolar | Geopolítica, análisis internacional y mundo multipolar
     </title>
-
     <meta
       name="description"
       content="Análisis sobre geopolítica, poder global, relaciones internacionales y el nuevo orden multipolar."
     />
-
     <link rel="stylesheet" href="estilos/style.css" />
   </head>
 
   <body>
     <div id="navbar-placeholder"></div>
 
-    <div class="conteiner">
-      <div class="foto">
-        <div class="rectangle">
-          <a href="./art/resultado.pdf">
-            <h1>Desdolarización digital</h1>
-          </a>
-          <a href="./art/resultado.pdf">
-            <div class="resume">
+    <main>
+      <section class="hero-section">
+        <div class="hero-bg">
+          <div class="hero-card">
+            <span class="etiqueta-destacado">Artículo Destacado</span>
+            <a href="./art/resultado.pdf" class="hero-enlace">
+              <h1>Desdolarización digital</h1>
               <p>
                 Innovación tecnológica y poder estructural en el nuevo orden
-                financiero.
+                financiero. Un análisis profundo de las tendencias globales.
               </p>
-            </div>
-          </a>
+              <span class="leer-mas">Leer ensayo &rarr;</span>
+            </a>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="seccion-titulo">
-      <h3>Recientes</h3>
-      <div class="linea-decorativa"></div>
-    </div>
-    <div class="padre">
-      <div class="hijos">
-        <img src="img/1.jpg" alt="es la img uno" />
-        <a href="art/africaOccidental.pdf">
-          <h2>Colonialismo, dignidad y memoria:</h2>
-        </a>
+      </section>
 
-        <p>
-          Africa Occidental no pertenece únicamente al pasado. Persiste como una
-          herida ética y política que se reactualiza.
-        </p>
-      </div>
-      <div class="hijos">
-        <img src="img/2.jpg" alt="es la img uno" />
-        <a href="art/juridico.pdf">
-          <h2>De la soberanía al compromiso global</h2>
-        </a>
+      <section class="recientes-section">
+        <div class="seccion-titulo">
+          <h3>Recientes</h3>
+          <div class="linea-decorativa"></div>
+        </div>
 
-        <p>Los Tratados Internacionales en el sistema jurídico mexicano</p>
-      </div>
-      <div class="hijos">
-        <img src="img/3.jpg" alt="es la img uno" />
-        <a href="art/reforma.pdf">
-          <h2>Reforma de 2011 y control de convencionalidad</h2>
-        </a>
+        <div class="grid-recientes">
+          <article class="tarjeta-reciente">
+            <a href="art/africaOccidental.pdf" class="card-enlace">
+              <div class="img-container">
+                <img src="img/1.jpg" alt="es la img uno" />
+              </div>
+              <div class="texto-tarjeta">
+                <h2>Colonialismo, dignidad y memoria</h2>
+                <p>
+                  África Occidental no pertenece únicamente al pasado. Persiste
+                  como una herida ética y política que se reactualiza.
+                </p>
+              </div>
+            </a>
+          </article>
 
-        <p>La constitucionalización del derecho internacional en México</p>
-      </div>
-      <div class="hijos">
-        <img src="img/4.jpg" alt="es la img uno" />
-        <a href="./art/5.pdf">
-          <h2>Ala humanitaria</h2>
-        </a>
+          <article class="tarjeta-reciente">
+            <a href="art/juridico.pdf" class="card-enlace">
+              <div class="img-container">
+                <img src="img/2.jpg" alt="es la img dos" />
+              </div>
+              <div class="texto-tarjeta">
+                <h2>De la soberanía al compromiso global</h2>
+                <p>
+                  Los Tratados Internacionales en el sistema jurídico mexicano y
+                  su evolución histórica.
+                </p>
+              </div>
+            </a>
+          </article>
 
-        <p>
-          la aviación como infraestructura estratégica frente a desastres
-          naturales
-        </p>
-      </div>
-    </div>
+          <article class="tarjeta-reciente">
+            <a href="art/reforma.pdf" class="card-enlace">
+              <div class="img-container">
+                <img src="img/3.jpg" alt="es la img tres" />
+              </div>
+              <div class="texto-tarjeta">
+                <h2>Reforma de 2011 y convencionalidad</h2>
+                <p>
+                  La constitucionalización del derecho internacional en México y
+                  su impacto normativo.
+                </p>
+              </div>
+            </a>
+          </article>
+
+          <article class="tarjeta-reciente">
+            <a href="./art/5.pdf" class="card-enlace">
+              <div class="img-container">
+                <img src="img/4.jpg" alt="es la img cuatro" />
+              </div>
+              <div class="texto-tarjeta">
+                <h2>Ala humanitaria</h2>
+                <p>
+                  La aviación como infraestructura estratégica frente a
+                  desastres naturales y crisis globales.
+                </p>
+              </div>
+            </a>
+          </article>
+        </div>
+      </section>
+    </main>
+
     <div id="footer-placeholder"></div>
+
     <script>
       function incluirHTML(id, ruta) {
         fetch(ruta)
           .then((response) => {
-            if (!response.ok) {
-              throw new Error("ERROR AL CARGAR LA RUTA" + ruta);
-            }
+            if (!response.ok)
+              throw new Error("ERROR AL CARGAR LA RUTA " + ruta);
             return response.text();
           })
           .then((data) => {
