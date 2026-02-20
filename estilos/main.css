@@ -1,193 +1,134 @@
 /* =========================================
-   SECCIÓN HERO (ARTÍCULO DESTACADO)
+   NUEVO HERO CARRUSEL
    ========================================= */
-.hero-section {
-  max-width: 1200px;
-  margin: 40px auto 80px auto; /* 40px arriba para separar del Nav, 80px abajo para respirar */
+.carrusel-section {
+  width: 100%;
+  max-width: 1300px;
+  margin: 40px auto;
   padding: 0 20px;
 }
 
-.hero-bg {
-  height: 500px;
-  background-image: url("../img/dolares.jpg");
+.carrusel-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  height: 600px;
+}
+
+.carrusel-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.carrusel-slide {
+  min-width: 100%;
+  height: 100%;
   background-size: cover;
   background-position: center;
-  border-radius: 20px; /* Bordes redondeados más modernos */
   display: flex;
-  align-items: center; /* Centra la tarjeta verticalmente */
-  padding-left: 50px; /* Margen interno izquierdo para la caja de texto */
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  padding-left: 80px;
 }
 
+/* Reutilizamos y mejoramos tu hero-card */
 .hero-card {
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.95
-  ); /* Fondo blanco con ligera transparencia */
+  background-color: rgba(255, 255, 255, 0.96);
   padding: 40px;
-  max-width: 500px;
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  max-width: 450px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  animation: fadeUp 0.8s ease;
 }
 
-.etiqueta-destacado {
-  font-size: 0.85rem;
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-card h1,
+.hero-card h2 {
+  font-family: "Noto Serif Display", serif;
   color: #1c486e;
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: 2px;
-  margin-bottom: 15px;
-  border-bottom: 2px solid #d8d1c7;
-  padding-bottom: 5px;
-  display: inline-block;
-  width: max-content;
-}
-
-.hero-enlace {
-  text-decoration: none;
-  color: inherit;
-}
-
-.hero-enlace h1 {
-  font-family:
-    "Noto Serif Display", serif; /* Conectamos con el diseño del logo */
-  font-size: 2.8rem;
-  color: #1c486e;
+  font-size: 2.5rem;
+  margin: 15px 0;
   line-height: 1.1;
-  margin-bottom: 20px;
-  transition: color 0.3s;
 }
 
-.hero-enlace:hover h1 {
-  color: #d8d1c7; /* El color arena al pasar el mouse */
+/* Botones de Navegación */
+.carrusel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 20px 15px;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+  transition: 0.3s;
+  z-index: 10;
 }
 
-.hero-enlace p {
-  color: #444;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: 25px;
+.carrusel-btn:hover {
+  background: #1c486e;
+}
+.next {
+  right: 0;
+  border-radius: 5px 0 0 5px;
+}
+.prev {
+  left: 0;
 }
 
-/* =========================================
-   SECCIÓN RECIENTES (EL GRID)
-   ========================================= */
-.recientes-section {
-  margin-bottom: 100px; /* Mucho aire antes de llegar al footer */
-}
-
-.seccion-titulo {
-  max-width: 1200px;
-  margin: 0 auto 40px auto;
-  padding: 0 20px;
-}
-
-.seccion-titulo h3 {
-  color: #1c486e;
-  font-family: "Lato", sans-serif;
-  font-size: 1.8rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 8px;
-}
-
-.linea-decorativa {
-  height: 4px;
-  background-color: #1c486e;
-  width: 80px;
-}
-
-/* El Grid para las tarjetas (Mismo sistema que en essays.html) */
-.grid-recientes {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.tarjeta-reciente {
-  background-color: white;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-  border: 1px solid #eee;
-}
-
-.tarjeta-reciente:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-}
-
-.card-enlace {
-  text-decoration: none;
-  color: inherit;
+/* Indicadores (Dots) */
+.carrusel-indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
-  flex-direction: column;
-  height: 100%;
+  gap: 10px;
 }
 
-.img-container {
-  height: 200px;
-  overflow: hidden;
+.dot {
+  width: 12px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.img-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
+.dot.active {
+  background: white;
+  transform: scale(1.3);
 }
 
-.tarjeta-reciente:hover .img-container img {
-  transform: scale(1.08);
-}
-
-.texto-tarjeta {
-  padding: 25px;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-}
-
-.texto-tarjeta h2 {
-  font-size: 1.2rem;
-  color: #1c486e;
-  margin-bottom: 15px;
-  line-height: 1.3;
-}
-
-.texto-tarjeta p {
-  color: #666;
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-
-/* =========================================
-   RESPONSIVO (CELULARES)
-   ========================================= */
-@media (max-width: 768px) {
-  .hero-bg {
+/* RESPONSIVO */
+@media (max-width: 800px) {
+  .carrusel-container {
+    height: 500px;
+  }
+  .carrusel-slide {
     padding: 20px;
-    height: auto;
-    min-height: 500px;
     justify-content: center;
   }
-
   .hero-card {
     padding: 30px;
-    width: 100%;
+    text-align: center;
   }
-
-  .hero-enlace h1 {
-    font-size: 2.2rem;
+  .hero-card h1,
+  .hero-card h2 {
+    font-size: 1.8rem;
   }
 }

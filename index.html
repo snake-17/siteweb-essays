@@ -17,90 +17,94 @@
     <div id="navbar-placeholder"></div>
 
     <main>
-      <section class="hero-section">
-        <div class="hero-bg">
-          <div class="hero-card">
-            <span class="etiqueta-destacado">Artículo Destacado</span>
-            <a href="./art/resultado.pdf" class="hero-enlace">
-              <h1>Desdolarización digital</h1>
-              <p>
-                Innovación tecnológica y poder estructural en el nuevo orden
-                financiero. Un análisis profundo de las tendencias globales.
-              </p>
-              <span class="leer-mas">Leer ensayo &rarr;</span>
-            </a>
+      <section class="carrusel-section">
+        <div class="carrusel-container">
+          <div class="carrusel-track" id="track">
+            <div
+              class="carrusel-slide"
+              style="background-image: url(&quot;./img/dolares.jpg&quot;)"
+            >
+              <div class="hero-card">
+                <span class="etiqueta-destacado">Geopolítica</span>
+                <a href="./art/resultado.pdf" class="hero-enlace">
+                  <h1>Desdolarización digital</h1>
+                  <p>
+                    Innovación tecnológica y poder estructural en el nuevo orden
+                    financiero.
+                  </p>
+                  <span class="leer-mas">Leer ensayo &rarr;</span>
+                </a>
+              </div>
+            </div>
+
+            <div
+              class="carrusel-slide"
+              style="background-image: url(&quot;./img/1.jpg&quot;)"
+            >
+              <div class="hero-card">
+                <span class="etiqueta-destacado">Historia & Memoria</span>
+                <a href="art/africaOccidental.pdf" class="hero-enlace">
+                  <h2>Colonialismo y Dignidad</h2>
+                  <p>
+                    La reivindicación akan frente al silencio británico y la
+                    herida ética que persiste.
+                  </p>
+                  <span class="leer-mas">Leer ensayo &rarr;</span>
+                </a>
+              </div>
+            </div>
+
+            <div
+              class="carrusel-slide"
+              style="background-image: url(&quot;./img/2.jpg&quot;)"
+            >
+              <div class="hero-card">
+                <span class="etiqueta-destacado">Derecho Internacional</span>
+                <a href="art/juridico.pdf" class="hero-enlace">
+                  <h2>Soberanía y Compromiso</h2>
+                  <p>
+                    Los Tratados Internacionales en el sistema jurídico mexicano
+                    y su evolución.
+                  </p>
+                  <span class="leer-mas">Leer ensayo &rarr;</span>
+                </a>
+              </div>
+            </div>
+
+            <div
+              class="carrusel-slide"
+              style="background-image: url(&quot;./img/4.jpg&quot;)"
+            >
+              <div class="hero-card">
+                <span class="etiqueta-destacado">Seguridad Global</span>
+                <a href="./art/5.pdf" class="hero-enlace">
+                  <h2>Ala Humanitaria</h2>
+                  <p>
+                    La aviación como infraestructura estratégica frente a
+                    desastres naturales.
+                  </p>
+                  <span class="leer-mas">Leer ensayo &rarr;</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <button class="carrusel-btn prev" onclick="moveSlide(-1)">
+            &#10094;
+          </button>
+          <button class="carrusel-btn next" onclick="moveSlide(1)">
+            &#10095;
+          </button>
+
+          <div class="carrusel-indicators">
+            <div class="dot active" onclick="currentSlide(0)"></div>
+            <div class="dot" onclick="currentSlide(1)"></div>
+            <div class="dot" onclick="currentSlide(2)"></div>
+            <div class="dot" onclick="currentSlide(3)"></div>
           </div>
         </div>
       </section>
 
-      <section class="recientes-section">
-        <div class="seccion-titulo">
-          <h3>Recientes</h3>
-          <div class="linea-decorativa"></div>
-        </div>
-
-        <div class="grid-recientes">
-          <article class="tarjeta-reciente">
-            <a href="art/africaOccidental.pdf" class="card-enlace">
-              <div class="img-container">
-                <img src="img/1.jpg" alt="es la img uno" />
-              </div>
-              <div class="texto-tarjeta">
-                <h2>Colonialismo, dignidad y memoria</h2>
-                <p>
-                  África Occidental no pertenece únicamente al pasado. Persiste
-                  como una herida ética y política que se reactualiza.
-                </p>
-              </div>
-            </a>
-          </article>
-
-          <article class="tarjeta-reciente">
-            <a href="art/juridico.pdf" class="card-enlace">
-              <div class="img-container">
-                <img src="img/2.jpg" alt="es la img dos" />
-              </div>
-              <div class="texto-tarjeta">
-                <h2>De la soberanía al compromiso global</h2>
-                <p>
-                  Los Tratados Internacionales en el sistema jurídico mexicano y
-                  su evolución histórica.
-                </p>
-              </div>
-            </a>
-          </article>
-
-          <article class="tarjeta-reciente">
-            <a href="art/reforma.pdf" class="card-enlace">
-              <div class="img-container">
-                <img src="img/3.jpg" alt="es la img tres" />
-              </div>
-              <div class="texto-tarjeta">
-                <h2>Reforma de 2011 y convencionalidad</h2>
-                <p>
-                  La constitucionalización del derecho internacional en México y
-                  su impacto normativo.
-                </p>
-              </div>
-            </a>
-          </article>
-
-          <article class="tarjeta-reciente">
-            <a href="./art/5.pdf" class="card-enlace">
-              <div class="img-container">
-                <img src="img/4.jpg" alt="es la img cuatro" />
-              </div>
-              <div class="texto-tarjeta">
-                <h2>Ala humanitaria</h2>
-                <p>
-                  La aviación como infraestructura estratégica frente a
-                  desastres naturales y crisis globales.
-                </p>
-              </div>
-            </a>
-          </article>
-        </div>
-      </section>
       <div id="revista-placeholder"></div>
     </main>
 
@@ -124,5 +128,6 @@
       incluirHTML("footer-placeholder", "components/footer.html");
     </script>
     <script type="text/javascript" src="javascript/nav.js"></script>
+    <script type="text/javascript" src="javascript/carrusel.js"></script>
   </body>
 </html>
