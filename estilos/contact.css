@@ -103,7 +103,31 @@
 .btn-cv:hover {
   transform: scale(1.05);
 }
+/* Estilos para la nueva columna de la foto */
+.foto-contacto {
+  flex: 0.7; /* Controla qué tan ancha es la columna de la foto en relación a las demás */
+  min-height: 100%;
+  overflow: hidden; /* Asegura que la imagen no se salga de los bordes redondeados */
+}
 
+.foto-contacto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Recorta la imagen automáticamente para que llene el espacio sin aplastarse */
+  object-position: center top; /* Centra la foto, enfocándose en la parte superior (el rostro) */
+}
+
+/* Ajuste Responsivo para celulares (Asegúrate de ponerlo dentro de tu @media de celulares) */
+@media (max-width: 768px) {
+  .contacto-container {
+    flex-direction: column; /* Apila Foto -> Info -> CV */
+  }
+
+  .foto-contacto {
+    height: 350px; /* Le damos una altura fija en celular para que no sea inmensa */
+    width: 100%;
+  }
+}
 /* Responsivo para celulares */
 @media (max-width: 768px) {
   .contacto-container {
